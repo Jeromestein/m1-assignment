@@ -96,44 +96,15 @@
     <main>
       <section>
         <h2>Dogs</h2>
-
-        <div class="pet-card">
-          <img src="images/dog1.jpg" alt="Max - Golden Retriever" width="600" />
-          <p>
-            Looking for a forever home. These sweet pups are waiting for someone
-            to give them love and care. Could that be you?
-          </p>
-        </div>
-
-        <div class="pet-card">
-          <img
-            src="images/dog2.webp"
-            alt="Luna - German Shepherd"
-            width="600"
-          />
-          <h3>Puppy of the Month</h3>
-          <p>Karl</p>
+        <div id="dogContainer">
+          <!-- Dogs will be inserted here by JavaScript -->
         </div>
       </section>
 
       <section>
         <h2>Cats</h2>
-        <div class="pet-card">
-          <img src="images/cat1.jpg" alt="Whiskers - Persian" width="600" />
-          <p>
-            Curious and cuddly companions in search of a family. Meet Whiskers
-            and friends—ready to brighten your days with purrs and play!
-          </p>
-        </div>
-
-        <div class="pet-card">
-          <img
-            src="images/cat2.jpeg"
-            alt="Shadow - Domestic Shorthair"
-            width="600"
-          />
-          <h3>Kitten of the Month</h3>
-          <p>Karla</p>
+        <div id="catContainer">
+          <!-- Cats will be inserted here by JavaScript -->
         </div>
       </section>
     </main>
@@ -142,5 +113,57 @@
       <p>Contact us: (123) 456-7890 | Email: adopt@lapets.org</p>
       <p>Address: 123 Adoption Lane, Los Angeles, CA 90001</p>
     </footer>
+
+    <script>
+      const pets = {
+        dogs: [
+          {
+            src: "images/dog1.jpg",
+            alt: "Max - Golden Retriever",
+            caption: "Looking for a forever home. These sweet pups are waiting for someone to give them love and care. Could that be you?"
+          },
+          {
+            src: "images/dog2.webp",
+            alt: "Luna - German Shepherd",
+            caption: "Puppy of the Month: Karl"
+          }
+        ],
+        cats: [
+          {
+            src: "images/cat1.jpg",
+            alt: "Whiskers - Persian",
+            caption: "Curious and cuddly companions in search of a family. Meet Whiskers and friends—ready to brighten your days with purrs and play!"
+          },
+          {
+            src: "images/cat2.jpeg",
+            alt: "Shadow - Domestic Shorthair",
+            caption: "Kitten of the Month: Karla"
+          }
+        ]
+      };
+
+      function displayPets(petArray, containerId) {
+        const container = document.getElementById(containerId);
+        
+        petArray.forEach(pet => {
+          const petCard = document.createElement('div');
+          petCard.className = 'pet-card';
+          
+          let html = `
+            <img src="${pet.src}" alt="${pet.alt}" width="600">
+            <p style="margin: 4px; line-height: 1.6; font-family: Arial, sans-serif; font-size: 18px; font-weight: bold;">${pet.caption}</p>
+          `;
+          
+          petCard.innerHTML = html;
+          container.appendChild(petCard);
+        });
+      }
+
+      // Initialize when page loads
+      window.onload = function() {
+        displayPets(pets.dogs, 'dogContainer');
+        displayPets(pets.cats, 'catContainer');
+      };
+    </script>
   </body>
 </html>
