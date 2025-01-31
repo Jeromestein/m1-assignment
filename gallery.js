@@ -6,7 +6,7 @@ const pets = {
             caption: "Looking for a forever home. These sweet pups are waiting for someone to give them love and care. Could that be you?",
             description: "Max is friendly～",
             infoTitle: "About Max",
-            infoText: "infoText"
+            infoText: "They are so used to approaching people. They are just like happy kids!"
         },
         {
             src: "images/dog2.webp",
@@ -14,7 +14,7 @@ const pets = {
             caption: "Puppy of the Month: Karl",
             description: "Karl is COOOOOl~",
             infoTitle: "About Karl",
-            infoText: "infoText"
+            infoText: "Karl sometimes easily gets lonely, but when he is with you, he is always happy!"
         }
     ],
     cats: [
@@ -24,7 +24,7 @@ const pets = {
             caption: "Curious and cuddly companions in search of a family. Meet Whiskers and friends—ready to brighten your days with purrs and play!",
             description: "Whiskers and friends are ready to welcome you~",
             infoTitle: "About Whiskers",
-            infoText: "infoText"
+            infoText: "They passionately follow you no matter where you go!"
         },
         {
             src: "images/cat2.jpeg",
@@ -32,7 +32,7 @@ const pets = {
             caption: "Kitten of the Month: Karla",
             description: "Say hi to Karla~",
             infoTitle: "About Karla",
-            infoText: "infoText"
+            infoText: "Karlka is so calm and always quiet, but that doesn't mean she is boerd. She is always happy inside!"
         }
     ]
 };
