@@ -32,7 +32,7 @@ const pets = {
             caption: "Kitten of the Month: Karla",
             description: "Say hi to Karla~",
             infoTitle: "About Karla",
-            infoText: "Karlka is so calm and always quiet, but that doesn't mean she is boerd. She is always happy inside!"
+            infoText: "Karlka is so calm and always quiet, but that doesn't mean she is boerd. She is always happy!"
         }
     ]
 };
